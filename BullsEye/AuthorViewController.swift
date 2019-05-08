@@ -9,11 +9,17 @@
 import UIKit
 
 class AuthorViewController: UIViewController {
+    
+    @IBOutlet weak var image: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        image.layer.borderWidth = 2
+        image.layer.masksToBounds = false
+        image.layer.borderColor = UIColor.white.cgColor
+        image.layer.cornerRadius = image.frame.height/2
+        image.clipsToBounds = true
     }
     
     @IBAction func close() {
